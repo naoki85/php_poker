@@ -1,6 +1,6 @@
 # ポーカー
 ## 仕様
-![画面設計](https://github.com/naoki85/poker/tree/master/for_wiki/window.png)<br />
+<img src="./for_wiki/window.png"><br/>
 <br />
 画面の目標は上図です。余裕がある方は自分の理想を目指してください。<br />
 <br />
@@ -8,7 +8,7 @@
 2. 52枚のカードからランダムに5枚のカードを手札とし、画面に表示させてください。
 3. 下図のように役判定もしてください。（役判定については後述します。）
 
-![画面設計](https://github.com/naoki85/poker/tree/master/for_wiki/window_2.png)<br />
+<img src="./for_wiki/window_2.png"><br/>
 
 ## 素材
 * トランプ画像 => image_trump/
