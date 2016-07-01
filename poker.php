@@ -141,7 +141,7 @@ class Poker
 		rsort($state);
 		if (array_shift($state) == 2) {
 			if (array_shift($state) == 2) {
-		return true;
+				return true;
 			}
 		}
 		return false;
@@ -176,8 +176,8 @@ class Poker
 		$state= true;
 		foreach ($numbers as $number) {
 			if ($last !== 0 && $number-$last != 1) {
-		$state = false;
-		break;
+				$state = false;
+				break;
 			}
 			$last = $number;
 		}
@@ -191,7 +191,7 @@ class Poker
 		$state = array();
 		foreach ($cards as $card) {
 			if (! isset($state[$card["number"]])) {
-		$state[$card["number"]] = 0;
+				$state[$card["number"]] = 0;
 			}
 			$state[$card["number"]]++;
 		}
