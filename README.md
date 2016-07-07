@@ -24,7 +24,7 @@ gif画像とpng画像があります。お好きな方を利用してくださ�
 あがった質問などは随時[こちらのページ](https://github.com/naoki85/poker/wiki/Q&A)にまとめています。
 
 ## 評価方法
-7/6 修正
+7/6 修正<br />
 [Wiki](https://github.com/naoki85/poker/wiki)に記載しました。
 
 ## 研修生のみなさまへ

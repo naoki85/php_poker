@@ -15,7 +15,8 @@ class Poker
 		5 => "ストレート",
 		6 => "スリーカード",
 		7 => "ツーペア",
-		8 => "ブタ"
+		8 => "ワンペア",
+		9 => "ブタ"
 	);
 
 	/**
@@ -68,7 +69,10 @@ class Poker
 		if ($this->isPair($cards)) {
 			return 7;
 		}
-		return 8;
+		if ($this->onePair($cards)) {
+			return 8;
+		}
+		return 9;
 	}
 
 	/**
@@ -143,6 +147,18 @@ class Poker
 			if (array_shift($state) == 2) {
 				return true;
 			}
+		}
+		return false;
+	}
+
+	/**
+	* ワンペア判定
+	*/
+	private function onePair($cards) {
+		$state = $this->searchPair($cards);
+		rsort($state);
+		if (array_shift($state) == 2) {
+			return true;
 		}
 		return false;
 	}
