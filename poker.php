@@ -191,8 +191,8 @@ class Poker
 		sort($numbers);
 		$state= true;
 		foreach ($numbers as $number) {
-			if($number == 1) {
-				$last = 9;
+			if($last == 1 && $number == 10) {
+				$last = $number;
 				continue;
 			}
 
