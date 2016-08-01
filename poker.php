@@ -81,7 +81,7 @@ class Poker
 	private function isRoyal($cards) {
 		$state = false;
 		$royal = array(1, 10, 11, 12 ,13);
-		if($this->isSameMark($cards)) {
+		if($this->isStraightFlash($cards)) {
 			foreach($cards as $card) {
 				if(in_array($card["number"], $royal)) {
 					$state = true;
@@ -191,6 +191,11 @@ class Poker
 		sort($numbers);
 		$state= true;
 		foreach ($numbers as $number) {
+			if($number == 1) {
+				$last = 9;
+				continue;
+			}
+
 			if ($last !== 0 && $number-$last != 1) {
 				$state = false;
 				break;
