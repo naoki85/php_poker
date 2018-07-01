@@ -1,4 +1,5 @@
 <?php
+namespace naoki85;
 /**
  * ポーカーのルール判定クラス
  */
