@@ -6,7 +6,7 @@ class Poker
 {
 	private $poker;
 	private $state = 0;
-	private $name = array(
+	private $name = [
 		0 => "ロイヤルストレートフラッシュ",
 		1 => "ストレートフラッシュ",
 		2 => "フォーカード",
@@ -17,12 +17,12 @@ class Poker
 		7 => "ツーペア",
 		8 => "ワンペア",
 		9 => "ブタ"
-	);
+	];
 
 	/**
 	* 役の名前を返却
 	* @param Array $cards
-	* @return string
+	* @return String
 	*/
 	public function getYaku($cards) {
 		$result = $this->judge($cards);
@@ -32,8 +32,8 @@ class Poker
 
 	/**
 	* 役の名前を取得
-	* @param int
-	* @return string
+	* @param Integer
+	* @return String
 	*/
 	private function getName($state) {
 		return $this->name[$state];
@@ -42,7 +42,7 @@ class Poker
 	/**
 	 * 役の判定
 	 * @param Array $card
-	 * @return int
+	 * @return Integer
 	 */
 	private function judge($cards) {
 		if ($this->isRoyal($cards)) {
@@ -80,7 +80,7 @@ class Poker
 	*/
 	private function isRoyal($cards) {
 		$state = false;
-		$royal = array(1, 10, 11, 12 ,13);
+		$royal = [1, 10, 11, 12 ,13];
 		if($this->isStraightFlash($cards)) {
 			foreach($cards as $card) {
 				if(in_array($card["number"], $royal)) {
@@ -183,7 +183,7 @@ class Poker
 	* ストレート判定
 	*/
 	private function isStraight($cards) {
-		$numbers = array();
+		$numbers = [];
 		foreach ($cards as $card) {
 			$numbers[] = $card["number"];
 		}
@@ -209,7 +209,7 @@ class Poker
 	 * ペアを数え上げる
 	 */
 	private function searchPair($cards) {
-		$state = array();
+		$state = [];
 		foreach ($cards as $card) {
 			if (! isset($state[$card["number"]])) {
 				$state[$card["number"]] = 0;
