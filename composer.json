@@ -1,0 +1,23 @@
+{
+    "name": "naoki85/php_poker",
+    "type": "library",
+    "description": "'php_poker' is util files for poker.",
+    "homepage": "https://github.com/naoki85/php_poker",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "naoki85",
+            "email": "naoki.yoneyama.85@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+    },
+    "scripts": {
+    },
+    "autoload": {
+    },
+    "license": "MIT"
+}
